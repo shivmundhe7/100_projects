@@ -63,5 +63,34 @@
     button:hover{
         background-color: black;
     }
+      @media (max-width: 768px) {
+        .container {
+            margin: 100px auto;
+            max-width: 90%;
+            padding: 30px;
+        }
+
+        input, textarea {
+            width: 100%;
+        }
+
+        button {
+            margin: 20px auto 0;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .container {
+            padding: 20px;
+        }
+
+        h1 {
+            font-size: 20px;
+        }
+
+        button {
+            width: 100%;
+        }
+    }
 </style>
 </html>
