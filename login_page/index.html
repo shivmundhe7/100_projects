@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Login Page</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      background: linear-gradient(135deg, #667eea, #764ba2, #e65c9c);
+      font-family: Arial, sans-serif;
+    }
+
+    .form {
+      background-color: white;
+      width: 60vh;
+      height: 78vh;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 100px;
+      border-radius: 10px;
+      padding: 20px;
+    }
+
+    .input-container {
+      position: relative;
+      margin-bottom: 30px;
+      width: 80%;
+      margin-left: 20px;
+    }
+
+    .input-container input {
+      width: 100%;
+      padding: 10px 0;
+      font-size: 16px;
+      border: none;
+      border-bottom: 2px solid #ccc;
+      outline: none;
+      background: transparent;
+      color: #333;
+    }
+
+    .input-container label {
+      position: absolute;
+      top: 10px;
+      left: 0;
+      color: #aaa;
+      pointer-events: none;
+      transition: 0.5s ease;
+      font-size: 14px;
+    }
+
+    .input-container input:focus ~ label,
+    .input-container input:valid ~ label {
+      top: -15px;
+      font-size: 12px;
+      color: #4caf50;
+    }
+
+    .input-container input:focus {
+      border-bottom: 2px solid #4caf50;
+    }
+
+    p {
+      color: #555353;
+      margin-left: 20px;
+    }
+
+    a {
+      text-align: center;
+      font-size: 15px;
+      display: block;
+      margin-bottom: 10px;
+    }
+
+    .btn {
+      text-align: center;
+    }
+
+    button {
+      width: 300px;
+      height: 35px;
+      border-radius: 14px;
+      background: linear-gradient(135deg, #667eea, #764ba2, #e65c9c);
+      color: white;
+      font-size: 16px;
+      border: none;
+      cursor: pointer;
+    }
+
+    .social-icons {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 10px;
+    }
+
+    .social-icons i {
+      font-size: 28px;
+      padding: 10px;
+      border-radius: 50%;
+      color: white;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
+
+    .social-icons i:hover {
+      transform: scale(1.2);
+    }
+
+    .fa-facebook-f {
+      background: #3B5998;
+    }
+
+    .fa-google {
+      background: #DB4437;
+    }
+
+    .fa-twitter {
+      background: #1DA1F2;
+    }
+  </style>
+</head>
+<body>
+  <div class="form">
+    <h2 style="text-align: center; padding: 15px;">Login</h2>
+
+    <p>Username</p>
+    <div class="input-container">
+      <input type="text" required />
+      <label>Type your username</label>
+    </div>
+
+    <p>Password</p>
+    <div class="input-container">
+      <input type="password" required />
+      <label>Type your password</label>
+    </div>
+
+    <a href="/login_page/error.html" target="_blank">Forgot Password?</a>
+
+    <div class="btn">
+      <button><a href="https://github.com/shivmundhe7" target="_blank">Login</a></button><br /><br />
+      <p>or Sign up using</p>
+
+      <div class="social-icons">
+        <a href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://google.com"><i class="fab fa-google"></i></a>
+        <a href="https://twitter.com"><i class="fab fa-twitter"></i></a>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
