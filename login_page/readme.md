@@ -1,3 +1,3 @@
 ### 🔍 Static login Page Preview
 
-(login-preview.png)
+![Survey Form Preview](/login_page/login-preview.png)
