@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+</head>
+<body>
+    <div class="navbar">
+        <div class="logo">Weather App</div>
+            <div class="nav-btn">
+                <div class="home">Home</div>
+                <div class="about">About This app</div>
+            <div class="usage">Usage Guide</div>
+        </div>
+         <input type="text" placeholder="Search">
+         <button class="top-btn">Search</button>
+    </div>
+    <!-- Weather For Pune -->
+    <div class="heading">
+        <h2>Weather For Pune</h2>
+    </div>
+    <div class="info">   
+         <div class="temp">
+            <div class="temp-name">
+                Temperature
+            </div>
+            <div class="data">
+                <h2>16°C</h2>
+            </div>
+            <div class="data2">
+                <p>Temperature Is 16</p>
+                <p>min Temperature is 16</p>
+                <p>max Temperature is 16</p>
+            </div>
+            <div class="first-btn">
+                <button>
+                    Sign Up For free
+                </button>
+            </div>
+    </div>
+
+        <div class="humidity">
+            <div class="humidity-name">
+                Humidity Info
+            </div>
+            <div class="data">
+                <h2>64%</h2>
+            </div>
+            <div class="data2">
+                <p>wind degree is 348</p>
+                <p>feels like 15</p>
+                <p>humidity is 64</p>
+            </div>
+            <div class="sec-btn">
+                <button>Get Started</button>
+            </div>
+            
+    </div>
+
+        <div class="wind">
+            <div class="wind-name">
+                Wind Info
+            </div>
+            <div class="data">
+                <h2>1.71km/hr</h2>
+            </div>
+            <div class="data2">
+                <p>wind speed is 1.71</p>
+                <p>sunrise is 6:03</p>
+                <p>sunset is 6:56</p>
+            </div>
+            <div class="third-btn">
+                <button>Contact US</button>
+            </div>
+    </div>
+</div>
+                    <!-- Table -->
+        
+  <h2>Weather of other common places</h2>
+
+  <table>
+    <thead>
+      <tr>
+        <th></th>
+        <th>Cloud_pct</th>
+        <th>Feels_like</th>
+        <th>Humidity</th>
+        <th>Max_temp</th>
+        <th>Min_temp</th>
+        <th>Sunrise</th>
+        <th>Sunset</th>
+        <th>Temp</th>
+        <th>Wind_degrees</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Shanghai</td>
+        <td>1</td>
+        <td>2</td>
+        <td>3</td>
+        <td>4</td>
+        <td>5</td>
+        <td>1</td>
+        <td>2</td>
+        <td>3</td>
+        <td>4</td>
+      </tr>
+      <tr>
+        <td>Boston</td>
+        <td>1</td>
+        <td>2</td>
+        <td>3</td>
+        <td>4</td>
+        <td>5</td>
+        <td>1</td>
+        <td>2</td>
+        <td>3</td>
+        <td>4</td>
+      </tr>
+      <tr>
+        <td>Lucknow</td>
+        <td>1</td>
+        <td>2</td>
+        <td>3</td>
+        <td>4</td>
+        <td>5</td>
+        <td>1</td>
+        <td>2</td>
+        <td>3</td>
+        <td>4</td>
+      </tr>
+      <tr>
+        <td>Kolkata</td>
+        <td>1</td>
+        <td>2</td>
+        <td>3</td>
+        <td>4</td>
+        <td>5</td>
+        <td>1</td>
+        <td>2</td>
+        <td>3</td>
+        <td>4</td>
+      </tr>
+    </tbody>
+  </table>
+  
+   <footer>
+      <div class="footer-bottom">
+    <p>&copy; 2025 Shiv's Weather App | All Rights Reserved</p>
+  </div>
+   </footer>
+</body>
+
+<style>
+    body{
+        color: black;
+    }
+    .logo{
+        font-size: 20px;
+        width:150px;  
+    }
+    .navbar {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid white;
+    background-color: rgb(201, 201, 201);
+    }
+    .nav-btn{
+      display: grid;
+      grid-template-columns: repeat(4, 0.4fr);
+    }
+    .about{
+        display: grid;
+      width: 200px;
+    }
+    .usage{
+        display: grid;
+      grid-template-columns: repeat(4, 0.4fr);
+      width: 300px;
+    }
+    input{
+        margin-left: 150px;
+        border-radius: 5px;
+        border-width: 0.1px;
+        height: 20px;
+    }
+    .top-btn{
+        height: 23px;
+        border-color: green;
+        border-width: 0.1;
+        color: green;
+    }
+    .heading{
+        text-align: center;
+    }
+    .info{
+           display: flex;
+           justify-content: center;
+    }
+    .temp{
+        border:0.5px solid ;
+        width: 300px;
+        height: 270px;
+        border-radius: 5px;
+        border-width: 0.1px;
+        margin-left: 50px;
+    }
+    .humidity{
+        border:0.5px solid ;
+        width: 300px;
+        height: 270px;
+        border-radius: 5px;
+        border-width: 0.1px;
+        margin-left: 50px;
+    }
+    .wind{
+        border:0.5px solid ;
+        width: 300px;
+        height: 270px;
+        border-radius: 5px;
+        border-width: 0.1px;
+        margin-left: 50px;
+    }
+    .temp-name{
+        text-align: center;
+        font-size: 20px;
+        padding: 5px;
+        border-bottom: 1px solid black;
+    }
+        .humidity-name{
+        text-align: center;
+        font-size: 20px;
+        padding: 5px;
+        border-bottom: 1px solid black;
+    }
+        .wind-name{
+        text-align: center;
+        font-size: 20px;
+        padding: 5px;
+        border-bottom: 1px solid black;
+    }
+    .data{
+        text-align: center;
+    }
+    .data2{
+        text-align: center;
+
+    }
+    .first-btn{
+        text-align: center;
+    }
+    .sec-btn{
+        text-align: center;
+    }
+    .third-btn{
+        text-align: center;
+    }
+    .first-btn button{
+        background-color: rgb(52, 52, 171);
+        color: white;
+        height: 40px;
+        width: 200px;
+        border-radius: 5px;
+    }
+        .sec-btn button{
+        background-color: rgb(52, 52, 171);
+        color: white;
+        height: 40px;
+        width: 200px;
+        border-radius: 5px;
+    }
+        .third-btn button{
+        background-color: rgb(52, 52, 171);
+        color: white;
+        height: 40px;
+        width: 200px;
+        border-radius: 5px;
+    }
+       h2 {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background-color: white;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    th, td {
+      border: 1px solid #ddd;
+      padding: 12px;
+      text-align: center;
+    }
+
+    th {
+      background-color: #f2f2f2;
+      font-weight: bold;
+    }
+
+    tr:hover {
+      background-color: #f1f1f1;
+    }
+
+    td:first-child {
+      text-align: left;
+      font-weight: bold;
+    }
+    marquee{
+        background-color: aquamarine;
+        height: 35px;
+        font-size: 30px;
+    }
+    .footer-bottom {
+  text-align: center;
+  padding: 10px;
+  border-top: 1px solid #444;
+  margin-top: 20px;
+  font-size: 14px;
+}
+</style>
+</html>
