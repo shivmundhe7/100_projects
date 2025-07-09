@@ -1,3 +1,3 @@
 ### 🔍 Weather App UI Preview
 
-![Survey Form Preview](weather-UI/weather-preview.png)
+![Survey Form Preview](Weather-UI/weather-preview.png)
