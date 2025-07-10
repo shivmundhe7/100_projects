@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Error Page</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      background-color: #f2f2f2;
+      font-family: Arial, sans-serif;
+    }
+
+    .marquee-container {
+      width: 100%;
+      background-color: #444;
+      color: white;
+      padding: 5px 0;
+      position: absolute;
+      bottom: 0;
+    }
+
+    .container {
+      text-align: center;
+      padding: 30px;
+      margin-top: 40px;
+    }
+
+    .container h1 {
+      font-size: 50px;
+      margin: 0;
+    }
+
+    .container p {
+      font-size: 20px;
+      margin: 10px 0 20px;
+    }
+
+    .container button {
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      background-color: rgb(66, 66, 163);
+      color: white;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    .container button:hover {
+      background-color: rgb(55, 55, 140);
+    }
+  </style>
+</head>
+<body>
+  <div class="marquee-container">
+    <marquee behavior="scroll" direction="left">🚨 Page Not Found – You may have entered an incorrect URL.</marquee>
+  </div>
+
+  <div class="container">
+    <h1>404 Error</h1>
+    <p>Oops! Page not found</p>
+    <button onclick="location.href='/'">Back To Home</button>
+  </div>
+</body>
+</html>
