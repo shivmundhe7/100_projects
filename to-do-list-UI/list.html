@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do List</title>
+</head>
+<body>
+    <div class="container">
+        <div class="heading">
+            <h1>My To-Do List</h1>
+        </div>
+        <div class="search">
+            <input type="text" placeholder="Add a new task">
+            <button>+ Add</button>
+        </div>
+
+        <div class="tasks1 task-row">
+            <p>□ Courses</p>
+            <button class="delete-btn">✕</button>
+        </div>
+
+        <div class="tasks2 task-row">
+            <p>□ Work</p>
+            <button class="delete-btn">✕</button>
+        </div>
+
+        <div class="tasks3 task-row">
+                <p>□ New Task</p>
+            <button class="delete-btn">✕</button>
+        </div>
+            <div class="tasks3 task-row">
+                <p>□ Games</p>
+            <button class="delete-btn">✕</button>
+            </div>
+            <div class="tasks3 task-row">
+                <p>□ College Work</p>
+            <button class="delete-btn">✕</button>
+        </div>
+    </div>
+</body>
+
+<style>
+    body{
+        justify-content: center;
+        text-align: center;
+        padding: 0;
+        margin: 0;
+    }
+    .container{
+        background-color: rgb(42, 42, 71);
+        height: 500px;
+        width: 400px;
+        text-align: center;
+        margin-left: 470px;
+        color: white;
+        border-radius: 15px;
+        margin-top: 70px;
+    }
+    .heading h1{
+        padding: 10px;
+    }
+    .search{
+        display: flex;
+    }
+    .search input{
+        border: 0px solid white;
+        border-radius: 15px;
+        margin-left: 45px;
+        background-color:rgb(56, 54, 54);
+        color: white;
+        height: 30px;
+        width: 200px;
+        text-align: center;
+    }
+    .search button{
+        border-radius: 20px;
+        width: 100px;
+        height: 37px;
+        margin-left: 10px;
+    }
+    .task-row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 20px;
+        border: 1px solid white;
+        width: 250px;
+        margin-left: 50px;
+        margin-top: 30px;
+        border-radius: 10px;
+        background-color: rgb(88, 88, 107); 
+        padding: 5px 15px;
+    }
+    .task-row p {
+        margin: 0;
+        text-align: left;
+    }
+    .delete-btn {
+        background-color: transparent;
+        border: none;
+        color: white;
+        font-size: 20px;
+        cursor: pointer;
+        transition: color 0.3s ease;
+    }
+    .delete-btn:hover {
+        color: red;
+    }
+</style>
+</html>
