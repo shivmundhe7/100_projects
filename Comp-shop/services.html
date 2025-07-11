@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Services - SB Computers</title>
+    <style>
+        * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+        .container {
+            max-width: 1100px;
+            margin: auto;
+            padding: 50px 20px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+            margin-bottom: 40px;
+        }
+
+        .services {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .service-box {
+            background-color: white;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .service-box:hover {
+            transform: translateY(-5px);
+        }
+
+        .service-title {
+            font-size: 20px;
+            color: #2980b9;
+            margin-bottom: 15px;
+            font-weight: bold;
+        }
+
+        .service-desc {
+            font-size: 15px;
+            color: #555;
+            line-height: 1.6;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 30px 15px;
+            }
+        }
+        .navbar {
+  background-color: #000000;
+  color: white;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #00bcd4;
+}
+.category-navbar {
+  background-color: #222;
+  padding: 12px 20px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  border-top: 2px solid #444;
+  border-bottom: 2px solid #444;
+}
+
+.category-navbar-content {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  max-width: 1000px;
+  width: 100%;
+  justify-content: center;
+}
+
+.category-title {
+  color: #fff;
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin-right: 70px;
+}
+
+.category-links {
+  list-style: none;
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.category-links li a {
+  color: #ddd;
+  text-decoration: none;
+  font-size: 0.95rem;
+  padding: 6px 12px;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+  background-color: #2c2c2c;
+}
+
+.category-links li a:hover {
+  background-color: #00bcd4;
+  color: #000;
+}
+    </style>
+</head>
+<body>
+                  <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo">SB Computers</div>
+    <ul class="nav-links">
+      <li><a href="/Comp-shop/home.html">Home</a></li>
+      <li><a href="/Comp-shop/about.html">About</a></li>
+      <li><a href="/Comp-shop/services.html">Services</a></li>
+      <li><a href="/Comp-shop/contact-form-example-01/index.html">Contact</a></li>
+    </ul>
+  </nav>
+                <!-- Category navbar -->
+  <nav class="category-navbar">
+  <div class="category-title">Categories</div>
+  <ul class="category-links">
+    <li><a href="/Comp-shop/laptops.html">Laptops</a></li>
+    <li><a href="/Comp-shop/desktop.html">Desktops</a></li>
+    <li><a href="/Comp-shop/access.html">Accessories</a></li>
+    <li><a href="/Comp-shop/monitors.html">Monitors</a></li>
+  </ul>
+</nav>
+    <div class="container">
+        <h1>Our Services</h1>
+        <div class="services">
+
+            <div class="service-box">
+                <div class="service-title">🛠️ Computer Repair & Maintenance</div>
+                <div class="service-desc">
+                    We fix desktops, laptops, and provide regular maintenance to keep your systems running like new.
+                </div>
+            </div>
+
+            <div class="service-box">
+                <div class="service-title">🖥️ Custom PC Builds</div>
+                <div class="service-desc">
+                    Need a powerful gaming rig or a work-from-home setup? We build custom PCs tailored to your exact needs.
+                </div>
+            </div>
+
+            <div class="service-box">
+                <div class="service-title">💽 Software Installation</div>
+                <div class="service-desc">
+                    From Windows installation to antivirus, drivers, and essential software, we handle it all.
+                </div>
+            </div>
+
+            <div class="service-box">
+                <div class="service-title">📡 Networking Solutions</div>
+                <div class="service-desc">
+                    Home or office Wi-Fi setup, LAN configuration, and internet troubleshooting done right.
+                </div>
+            </div>
+
+            <div class="service-box">
+                <div class="service-title">🔄 Data Recovery & Backup</div>
+                <div class="service-desc">
+                    Lost your files? We help recover deleted data and set up secure backups to protect your memories.
+                </div>
+            </div>
+
+            <div class="service-box">
+                <div class="service-title">🛒 Computer Accessories & Parts</div>
+                <div class="service-desc">
+                    Buy original keyboards, mice, monitors, RAM, SSDs, and more at the best price.
+                </div>
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>
