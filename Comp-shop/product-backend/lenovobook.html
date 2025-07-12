@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HP 15 Laptop</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: #f1f2f4;
+    }
+
+    /* Navbar */
+    .navbar {
+      background-color: #000;
+      color: white;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    .nav-links a:hover {
+      color: #00bcd4;
+    }
+
+    /* Category Navbar */
+    .category-navbar {
+      background-color: #222;
+      padding: 12px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-top: 2px solid #444;
+      border-bottom: 2px solid #444;
+      flex-wrap: wrap;
+    }
+
+    .category-title {
+      color: #fff;
+      font-size: 1.1rem;
+      font-weight: bold;
+    }
+
+    .category-links {
+      list-style: none;
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+      margin: 0;
+      padding: 0;
+    }
+
+    .category-links li a {
+      color: #ddd;
+      text-decoration: none;
+      font-size: 0.95rem;
+      padding: 6px 12px;
+      border-radius: 4px;
+      transition: all 0.3s ease;
+      background-color: #2c2c2c;
+    }
+
+    .category-links li a:hover {
+      background-color: #00bcd4;
+      color: #000;
+    }
+
+    .cart-icon {
+      position: relative;
+      font-size: 20px;
+    }
+
+    .cart-icon i {
+      color: white;
+    }
+
+    #cart-count {
+      position: absolute;
+      top: -8px;
+      right: -10px;
+      background-color: red;
+      color: white;
+      font-size: 12px;
+      border-radius: 50%;
+      padding: 2px 6px;
+    }
+
+    /* Product Page */
+    .container {
+      max-width: 1200px;
+      background: #fff;
+      display: flex;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      height: 380px;
+      margin: 25px auto;
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    .left-section {
+      width: 40%;
+      padding: 20px;
+    }
+
+    .left-section img {
+      width: 100%;
+      border-radius: 8px;
+    }
+
+    .right-section {
+      width: 60%;
+      padding: 20px;
+    }
+
+    .product-title {
+      font-size: 22px;
+      font-weight: 600;
+    }
+
+    .rating {
+      margin: 10px 0;
+      color: green;
+      font-weight: bold;
+    }
+
+    .emi {
+      margin: 8px 0;
+      font-size: 15px;
+      color: #333;
+    }
+
+    .price {
+      font-size: 24px;
+      color: #b12704;
+      font-weight: 600;
+    }
+
+    .cut-price {
+      text-decoration: line-through;
+      color: grey;
+      font-size: 16px;
+      margin-left: 10px;
+    }
+
+    .discount {
+      color: green;
+      font-size: 16px;
+      margin-left: 10px;
+    }
+
+    .desc {
+      margin: 15px 0;
+      font-size: 15px;
+      line-height: 1.6;
+    }
+
+    .btns {
+      display: flex;
+      gap: 15px;
+    }
+
+    .btns button {
+      padding: 12px 24px;
+      font-size: 16px;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    .buy-btn {
+      background: #fb641b;
+    }
+
+    .cart-btn {
+      background: #ff9f00;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="logo">SB Computers</div>
+    <ul class="nav-links">
+      <li><a href="/Comp-shop/home.html">Home</a></li>
+      <li><a href="/Comp-shop/about.html">About</a></li>
+      <li><a href="/Comp-shop/services.html">Services</a></li>
+      <li><a href="/Comp-shop/contact-form-example-01/index.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Category Navbar -->
+  <nav class="category-navbar">
+    <div class="category-title">Categories</div>
+    <ul class="category-links">
+      <li><a href="/Comp-shop/laptops.html">Laptops</a></li>
+      <li><a href="/Comp-shop/desktop.html">Desktops</a></li>
+      <li><a href="/Comp-shop/access.html">Accessories</a></li>
+      <li><a href="/Comp-shop/monitors.html">Monitors</a></li>
+    </ul>
+    <div class="cart-icon">
+      <a href="/Comp-shop/cart.html"><i class="fas fa-shopping-cart"></i></a>
+      <span id="cart-count">0</span>
+    </div>
+  </nav>
+
+  <!-- Product Preview -->
+  <div class="container">
+    <div class="left-section">
+      <img src="/Comp-shop/assets/lenovobook.jpg" alt="Laptop">
+    </div>
+
+    <div class="right-section">
+      <div class="product-title">Lenovo Chromebook</div>
+      <div class="rating">★ 3.9 | Good Product | 21 Rating</div>
+      <div class="emi">₹1,371/month EMI with HDFC Credit Card</div>
+      <div class="price">₹12,899 
+        <span class="cut-price">₹17,982</span>
+        <span class="discount">34% OFF</span>
+      </div>
+      <div class="desc">
+        • Chromebook Intel Celeron N4500 <br>
+        • 15.6" FHD Display<br>
+        • (4GB RAM/64GB)<br>
+        • i3-1305U<br>
+        • Radeon Graphics 
+      </div>
+      <div class="btns">
+        <button class="buy-btn">Buy Now</button>
+        <button class="cart-btn">Add To Cart</button>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
