@@ -249,10 +249,23 @@
       </div>
       <div class="btns">
         <button class="buy-btn">Buy Now</button>
-        <button class="cart-btn">Add To Cart</button>
+        <button class="cart-btn" id="add-to-cart-btn">Add To Cart</button>
+
+
       </div>
     </div>
   </div>
 
 </body>
+<script>
+  let cartCount = 0;
+const addToCartBtn = document.getElementById("add-to-cart-btn");
+  const cartCountSpan = document.getElementById("cart-count");
+
+  addToCartBtn.addEventListener("click", function () {
+    cartCount++;
+    cartCountSpan.textContent = cartCount;
+  });
+</script>
+
 </html>

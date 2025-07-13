@@ -301,4 +301,16 @@ body {
 }
 
 </style>
+<script>
+  let cartCount = 0;
+
+  const addToCartBtn = document.getElementById("add-to-cart-btn");
+  const cartCountSpan = document.getElementById("cart-count");
+
+  addToCartBtn.addEventListener("click", function () {
+    cartCount++;
+    cartCountSpan.textContent = cartCount;
+  });
+</script>
+
 </html>

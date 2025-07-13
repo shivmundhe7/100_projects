@@ -1,201 +1,294 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Fusionit Assembled i5 PC
-</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Fusionit i5 PC - SB Computers</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
 
   <style>
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       margin: 0;
       font-family: 'Segoe UI', sans-serif;
-      background: #f1f2f4;
+      background-color: #f4f4f4;
     }
 
-    /* Navbar */
     .navbar {
-      background-color: #000;
+      background-color: #232f3e;
       color: white;
       padding: 1rem 2rem;
       display: flex;
       justify-content: space-between;
       align-items: center;
+      flex-wrap: wrap;
     }
 
-    .logo {
+    .navbar .logo {
       font-size: 1.5rem;
       font-weight: bold;
     }
 
-    .nav-links {
-      list-style: none;
+    .navbar .nav-links {
       display: flex;
-      gap: 1.5rem;
+      gap: 20px;
+      flex-wrap: wrap;
     }
 
     .nav-links a {
       color: white;
       text-decoration: none;
-      transition: color 0.3s ease;
+      font-size: 1rem;
     }
 
-    .nav-links a:hover {
-      color: #00bcd4;
-    }
-
-    /* Category Navbar */
-    .category-navbar {
-      background-color: #222;
-      padding: 12px 20px;
+    .wrapper {
       display: flex;
-      justify-content: space-between;
-      align-items: center;
-      border-top: 2px solid #444;
-      border-bottom: 2px solid #444;
-      flex-wrap: wrap;
+      justify-content: center;
+      padding: 30px 20px;
     }
 
-    .category-title {
-      color: #fff;
-      font-size: 1.1rem;
-      font-weight: bold;
-    }
-
-    .category-links {
-      list-style: none;
-      display: flex;
-      gap: 16px;
-      flex-wrap: wrap;
-      margin: 0;
-      padding: 0;
-    }
-
-    .category-links li a {
-      color: #ddd;
-      text-decoration: none;
-      font-size: 0.95rem;
-      padding: 6px 12px;
-      border-radius: 4px;
-      transition: all 0.3s ease;
-      background-color: #2c2c2c;
-    }
-
-    .category-links li a:hover {
-      background-color: #00bcd4;
-      color: #000;
-    }
-
-    .cart-icon {
-      position: relative;
-      font-size: 20px;
-    }
-
-    .cart-icon i {
-      color: white;
-    }
-
-    #cart-count {
-      position: absolute;
-      top: -8px;
-      right: -10px;
-      background-color: red;
-      color: white;
-      font-size: 12px;
-      border-radius: 50%;
-      padding: 2px 6px;
-    }
-
-    /* Product Page */
-    .container {
-      max-width: 1200px;
+    .main-container {
+      width: 100%;
+      max-width: 1000px;
       background: #fff;
-      display: flex;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-      height: 380px;
-      margin: 25px auto;
-      border-radius: 8px;
-      overflow: hidden;
-    }
-
-    .left-section {
-      width: 40%;
+      border-radius: 10px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.1);
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      gap: 20px;
       padding: 20px;
+      margin: 0 auto;
     }
 
-    .left-section img {
+    .product-img img {
       width: 100%;
       border-radius: 8px;
+      border: 1px solid #ccc;
+      transition: transform 0.3s ease;
+      cursor: pointer;
     }
 
-    .right-section {
-      width: 60%;
-      padding: 20px;
+    .product-img img:hover {
+      transform: scale(1.05);
+    }
+
+    .product-info {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
     }
 
     .product-title {
-      font-size: 22px;
+      font-size: 1.8rem;
       font-weight: 600;
+      color: #222;
+      margin-bottom: 10px;
     }
 
-    .rating {
+    .product-rating {
+      color: #ffa41c;
+      font-size: 14px;
+      margin-bottom: 8px;
+    }
+
+    .price-info {
       margin: 10px 0;
-      color: green;
+    }
+
+    .price-info .price {
+      font-size: 22px;
       font-weight: bold;
+      color: #b12704;
+    }
+
+    .price-info .cut-price {
+      text-decoration: line-through;
+      color: #555;
+      margin-left: 10px;
+      font-size: 16px;
+    }
+
+    .price-info .discount {
+      color: green;
+      margin-left: 10px;
+      font-size: 16px;
     }
 
     .emi {
-      margin: 8px 0;
       font-size: 15px;
       color: #333;
+      margin-bottom: 10px;
     }
 
-    .price {
-      font-size: 24px;
-      color: #b12704;
-      font-weight: 600;
-    }
-
-    .cut-price {
-      text-decoration: line-through;
-      color: grey;
-      font-size: 16px;
-      margin-left: 10px;
-    }
-
-    .discount {
-      color: green;
-      font-size: 16px;
-      margin-left: 10px;
-    }
-
-    .desc {
-      margin: 15px 0;
-      font-size: 15px;
+    .description {
+      font-size: 14px;
+      color: #333;
       line-height: 1.6;
+      margin-bottom: 20px;
     }
 
-    .btns {
+    .actions {
       display: flex;
       gap: 15px;
     }
 
-    .btns button {
-      padding: 12px 24px;
-      font-size: 16px;
-      color: white;
+    .actions button {
+      padding: 12px 20px;
+      font-size: 15px;
       border: none;
-      border-radius: 6px;
       cursor: pointer;
+      border-radius: 6px;
+      font-weight: bold;
     }
 
     .buy-btn {
-      background: #fb641b;
+      background-color: #ff9900;
+      color: white;
     }
 
     .cart-btn {
-      background: #ff9f00;
+      background-color: #ffa41c;
+      color: white;
+    }
+
+    .gallery-section, .related-section {
+      max-width: 1000px;
+      margin: 30px auto;
+      padding: 0 20px;
+    }
+
+    .gallery-section h2, .related-section h2 {
+      font-size: 1.4rem;
+      margin-bottom: 10px;
+      color: #222;
+    }
+
+    .image-gallery {
+      display: flex;
+      gap: 15px;
+      overflow-x: auto;
+      padding: 10px 0;
+    }
+
+    .image-gallery label img {
+      width: 150px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
+
+    .image-gallery label img:hover {
+      transform: scale(1.1);
+    }
+
+    /* Modal (Pure HTML/CSS) */
+    #popup-toggle {
+      display: none;
+    }
+
+    .modal {
+      position: fixed;
+      top: 0; left: 0;
+      height: 100vh;
+      width: 100%;
+      background: rgba(0,0,0,0.6);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 999;
+      visibility: hidden;
+      opacity: 0;
+      transition: all 0.3s ease;
+    }
+
+    #popup-toggle:checked + .modal {
+      visibility: visible;
+      opacity: 1;
+    }
+
+    .modal-content img {
+      max-width: 90vw;
+      max-height: 80vh;
+      border-radius: 10px;
+    }
+
+    .close-btn {
+      position: absolute;
+      top: 30px;
+      right: 40px;
+      font-size: 30px;
+      color: white;
+      cursor: pointer;
+    }
+
+    /* Related Products */
+    .related-products {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .related-card {
+      width: 200px;
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      padding: 10px;
+      text-align: center;
+    }
+
+    .related-card img {
+      width: 100%;
+      border-radius: 6px;
+      transition: transform 0.3s;
+    }
+
+    .related-card img:hover {
+      transform: scale(1.05);
+    }
+
+    .related-card p {
+      margin: 10px 0 5px;
+      font-size: 14px;
+    }
+
+    .related-card .price {
+      color: #b12704;
+      font-weight: bold;
+    }
+
+    .related-card button {
+      width: 100%;
+      padding: 8px;
+      background: #ff9900;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+
+    @media (max-width: 768px) {
+      .main-container {
+        grid-template-columns: 1fr;
+      }
+
+      .navbar {
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .nav-links {
+        justify-content: center;
+      }
+
+      .related-products {
+        justify-content: center;
+      }
     }
   </style>
 </head>
@@ -204,56 +297,108 @@
   <!-- Navbar -->
   <nav class="navbar">
     <div class="logo">SB Computers</div>
-    <ul class="nav-links">
-      <li><a href="/Comp-shop/home.html">Home</a></li>
-      <li><a href="/Comp-shop/about.html">About</a></li>
-      <li><a href="/Comp-shop/services.html">Services</a></li>
-      <li><a href="/Comp-shop/contact-form-example-01/index.html">Contact</a></li>
-    </ul>
-  </nav>
-
-  <!-- Category Navbar -->
-  <nav class="category-navbar">
-    <div class="category-title">Categories</div>
-    <ul class="category-links">
-      <li><a href="/Comp-shop/laptops.html">Laptops</a></li>
-      <li><a href="/Comp-shop/desktop.html">Desktops</a></li>
-      <li><a href="/Comp-shop/access.html">Accessories</a></li>
-      <li><a href="/Comp-shop/monitors.html">Monitors</a></li>
-    </ul>
-    <div class="cart-icon">
-      <a href="/Comp-shop/cart.html"><i class="fas fa-shopping-cart"></i></a>
-      <span id="cart-count">0</span>
+    <div class="nav-links">
+      <a href="#">Home</a>
+      <a href="#">About</a>
+      <a href="#">Services</a>
+      <a href="#">Contact</a>
     </div>
   </nav>
 
-  <!-- Product Preview -->
-  <div class="container">
-    <div class="left-section">
-      <img src="/Comp-shop/assets/desk1.jpg" alt="Desktop">
-    </div>
+  <!-- Centered Product -->
+  <div class="wrapper">
+    <div class="main-container">
+      <div class="product-img">
+        <label for="popup-toggle">
+          <img src="/Comp-shop/assets/desk1.jpg" alt="Fusionit i5 PC">
+        </label>
+      </div>
+      <div class="product-info">
+        <div>
+          <div class="product-title">Fusionit Assembled i5 PC</div>
+          <div class="product-rating">★ 4.2 | 17 Ratings</div>
+          <div class="emi">₹836/month EMI with HDFC Credit Card</div>
 
-    <div class="right-section">
-      <div class="product-title">Fusionit Assembled i5 PC</div>
-      <div class="rating">★ 4.2 | Good Product | 17 Rating</div>
-      <div class="emi">₹836/month EMI with HDFC Credit Card</div>
-      <div class="price">₹10,259 
-        <span class="cut-price">₹18,923</span>
-        <span class="discount">84% OFF</span>
-      </div>
-      <div class="desc">
-        • Assembled PC office Work <br>
-        • 13.6" HD+ Display<br>
-        • Windows 11 Home + MS Office 365<br>
-        • i5 6th Gen Intel Core<br>
-        • Intel HD Graphics | 8 GB RAM | 256 GB SSD
-      </div>
-      <div class="btns">
-        <button class="buy-btn">Buy Now</button>
-        <button class="cart-btn">Add To Cart</button>
+          <div class="price-info">
+            <span class="price">₹10,259</span>
+            <span class="cut-price">₹18,923</span>
+            <span class="discount">84% OFF</span>
+          </div>
+
+          <div class="description">
+            • Assembled PC for office work<br>
+            • 13.6" HD+ Display<br>
+            • Windows 11 Home + MS Office 365<br>
+            • Intel Core i5 6th Gen<br>
+            • Intel HD Graphics | 8 GB RAM | 256 GB SSD
+          </div>
+        </div>
+
+        <div class="actions">
+          <button class="buy-btn">Buy Now</button>
+          <button class="cart-btn">Add to Cart</button>
+        </div>
       </div>
     </div>
   </div>
 
+  <!-- Image Gallery -->
+  <div class="gallery-section">
+    <h2>Product Images</h2>
+    <div class="image-gallery">
+      <label for="popup-toggle"><img src="/Comp-shop/assets/desk1.jpg" alt="Thumb 1"></label>
+      <label for="popup-toggle"><img src="/Comp-shop/assets/desk1.jpg" alt="Thumb 2"></label>
+      <label for="popup-toggle"><img src="/Comp-shop/assets/desk1.jpg" alt="Thumb 3"></label>
+      <label for="popup-toggle"><img src="/Comp-shop/assets/desk1.jpg" alt="Thumb 4"></label>
+    </div>
+  </div>
+
+  <!-- Related Products -->
+  <div class="related-section">
+    <h2>Related Products</h2>
+    <div class="related-products">
+      <div class="related-card">
+        <img src="/Comp-shop/assets/desk1.jpg" alt="HP Desktop">
+        <p>HP i3 Slim Desktop</p>
+        <p class="price">₹8,499</p>
+        <button>View</button>
+      </div>
+      <div class="related-card">
+        <img src="/Comp-shop/assets/desk1.jpg" alt="Lenovo ThinkCentre">
+        <p>Lenovo ThinkCentre i5</p>
+        <p class="price">₹10,999</p>
+        <button>View</button>
+      </div>
+      <div class="related-card">
+        <img src="/Comp-shop/assets/desk1.jpg" alt="Acer Desktop">
+        <p>Acer Aspire Desktop</p>
+        <p class="price">₹11,499</p>
+        <button>View</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal Image Zoom -->
+  <input type="checkbox" id="popup-toggle">
+  <div class="modal">
+    <label for="popup-toggle" class="close-btn">&times;</label>
+    <div class="modal-content">
+      <img src="/Comp-shop/assets/desk1.jpg" alt="Zoomed Image">
+    </div>
+  </div>
+
 </body>
+
+<script>
+  let cartCount = 0;
+
+  const addToCartBtn = document.getElementById("add-to-cart-btn");
+  const cartCountSpan = document.getElementById("cart-count");
+
+  addToCartBtn.addEventListener("click", function () {
+    cartCount++;
+    cartCountSpan.textContent = cartCount;
+  });
+
+</script>
 </html>
