@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Vardaan AI</title>
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+  <div class="toggle-menu">
+    <label class="switch">
+      <input type="checkbox" id="modeToggle">
+      <span class="slider"></span>
+    </label>
+    <div class="hamburger">
+      <div></div><div></div><div></div>
+    </div>
+  </div>
+
+  <div class="center-text">Hi Shiv, how can I help you today?</div>
+
+  <div class="input-container">
+    <input type="text" placeholder="Ask me something...">
+    <button class="circle-button send">
+      &#9658;
+    </button>
+    <button class="circle-button mic">
+      <svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 0 24 24" fill="white">
+        <path d="M12 14a3 3 0 0 0 3-3V5a3 3 0 0 0-6 0v6a3 3 0 0 0 3 3Zm5-3a5 5 0 0 1-10 0H5a7 7 0 0 0 6 6.92V21h2v-3.08A7 7 0 0 0 19 11h-2Z"/>
+      </svg>
+    </button>
+  </div>
+
+  <script>
+    document.getElementById('modeToggle').addEventListener('change', () => {
+      document.body.classList.toggle('light-mode');
+    });
+  </script>
+</body>
+</html>
